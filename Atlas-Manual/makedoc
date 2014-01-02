@@ -1,0 +1,7 @@
+#!/bin/bash
+for png in `ls *.png`
+do
+  convert $png $png.pdf
+done
+pdftk *.png.pdf output ManualOfLatheOperations.pdf
+rm *.png.pdf
